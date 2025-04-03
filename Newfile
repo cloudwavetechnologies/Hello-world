@@ -1,1 +1,11 @@
-xyz..
+resource "aws_instance" "linux_instance" {
+ ami             = "ami-id"
+ instance_type   = "t2.micro"
+ key_name        = "my-key"
+ subnet_id       = "subnet-linux"
+ security_groups = ["ssh"]
+
+ provisioner "local-exec" {
+   command = "scp -i ~/.ssh/my-key.pem local_file.txt ec2-user@${self.public_ip}:/home/ec2-user/remote_file.txt"
+ }
+}
