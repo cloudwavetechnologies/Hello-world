@@ -1,6 +1,6 @@
 #Latest version of node tested on.
 FROM node:12-alpine AS dist
-
+RUN USER root
 
 # Tini is recommended for Node apps https://github.com/krallin/tini
 RUN apk add --no-cache tini
