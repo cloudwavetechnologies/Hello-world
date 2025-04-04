@@ -9,3 +9,5 @@ resource "aws_instance" "linux_instance" {
    command = "scp -i ~/.ssh/my-key.pem local_file.txt ec2-user@${self.public_ip}:/home/ec2-user/remote_file.txt"
  }
 }
+
+Hello-wolrd
