@@ -11,3 +11,5 @@ resource "aws_instance" "linux_instance" {
 }
 
 Hello-wolrd
+
+# Welcome to the session
